@@ -127,22 +127,22 @@
                     </div>
                 </div>
 
-                {{-- Badge, List & Card --}}
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="h5 mb-3">Badges, List, &amp; Card</h3>
-                        <div class="mb-3">
-                            <span class="badge text-bg-primary">Web Dev</span>
-                            <span class="badge text-bg-success">Laravel</span>
-                            <span class="badge text-bg-danger">Bootstrap</span>
-                        </div>
+               {{-- Badge, List & Card --}}
+<div class="card">
+    <div class="card-body">
+        <h3 class="h5 mb-3">Riwayat Pendidikan</h3>
+        <div class="mb-3">
+            <span class="badge text-bg-primary">Web Dev</span>
+            <span class="badge text-bg-success">Laravel</span>
+            <span class="badge text-bg-danger">Bootstrap</span>
+        </div>
                         <ul class="list-group mb-3">
-                            <li class="list-group-item">Item Satu</li>
-                            <li class="list-group-item">Item Dua</li>
-                            <li class="list-group-item">Item Tiga</li>
+                            @foreach ($last_pendidikan as $pendidikan)
+                <li class="list-group-item">{{ $pendidikan }}</li>
+            @endforeach
                         </ul>
                         <div class="p-3 border rounded">
-                            <strong>Div umum</strong> — ini hanya <em>container</em> untuk konten bebas.
+                           <strong>Info User:</strong> Login sebagai <em>{{ $username }}</em>.
                         </div>
                         <p class="text-muted small mt-3 mb-0">
                             Gunakan <code>.card</code> untuk konten yang butuh border & sedikit efek shadow.
