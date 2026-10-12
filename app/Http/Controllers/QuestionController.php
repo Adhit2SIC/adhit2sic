@@ -43,7 +43,7 @@ class QuestionController extends Controller
         $email = $request->input('email');
         $pertanyaan = $request->input('pertanyaan');
 
-        return view('home-question-respon', compact('nama', 'email', 'pertanyaan'));
+       return redirect()->route('home-question-respon')->with(compact('nama', 'pertanyaan', 'email'));
     }
 
     /**
